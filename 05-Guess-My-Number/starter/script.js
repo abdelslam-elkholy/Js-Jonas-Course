@@ -5,6 +5,7 @@ let score = 20;
 let heighScore = 0;
 let message = document.querySelector('.message').textContent;
 let scoreLabel = document.querySelector('.score').textContent;
+let bodyColor = document.querySelector('body').style.backgroundColor;
 const checkBtn = document.querySelector('.check');
 const againBtn = document.querySelector('.again');
 const numLabel = document.querySelector('.number');
@@ -22,7 +23,7 @@ const playGame = () => {
     if (num === secretNumber) {
       document.querySelector('.highscore').textContent = score;
       
-      document.querySelector('body').style.backgroundColor = 'green';
+      
       numLabel.textContent = secretNumber;
       numLabel.style.width = '30rem';
     } else if (num > secretNumber) {
