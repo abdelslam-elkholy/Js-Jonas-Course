@@ -15,7 +15,7 @@ const numLabel = document.querySelector('.number');
 console.log(secretNumber);
 
 
-const guess = (text)=>
+const guessWrong = (text)=>
 {
     console.log('hey im working from guess');
     message.textContent = text;
@@ -23,7 +23,18 @@ const guess = (text)=>
     scoreLabel.textContent = score;
 }
 
+const guess = (text , highscore ,scoreb, color , width , numlabel)=> {
 
+    bodyColor.style.backgroundColor = color;
+    heighScore = highscore;
+    document.querySelector('.highscore').textContent = highscore;
+    numLabel.textContent = numlabel;
+    numLabel.style.width = width;
+    message.textContent = text;
+    score = scoreb
+    scoreLabel.textContent = scoreb
+
+}
 const playGame = () => {
 
   const num = Number(document.querySelector('.guess').value);
@@ -32,15 +43,12 @@ const playGame = () => {
   if (num) {
     console.log('hey im working from play if');
     if (num === secretNumber) {
-        
-      document.querySelector('.highscore').textContent = score;
-      numLabel.textContent = secretNumber;
-      numLabel.style.width = '30rem';
-      bodyColor = 'green';
+        guess('You Got It' , score ,score, '#60b347' , '30rem' , secretNumber)
+
     } else if (num > secretNumber) {
-        guess('Too High!')
+        guessWrong('Too High!')
     } else if (num < secretNumber) {
-      guess('Too Low');
+      guessWrong('Too Low');
     }
   }
   else
@@ -59,10 +67,6 @@ checkBtn.addEventListener('click', () => {
 
 againBtn.addEventListener('click' , ()=>
 {
-    score = 20;
-    message = 'Start guessing...'
-    numLabel.textContent = '?'
-    numLabel.style.width = '15rem'
-    bodyColor = 'black'
+    guess('Start guessing...' , heighScore ,20, '#222' , '15rem' , "?")
 
 })
