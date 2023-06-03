@@ -18,7 +18,7 @@ const guess = (message) =>
 const playGame = ()=>
 {
     const num = Number(document.querySelector('.guess').value) ;
-    while(typeof num === 'number' ){
+    if(typeof num === 'number' ){
     if (num === secretNumber)
     {
         document.querySelector('.highscore').textContent = score;
