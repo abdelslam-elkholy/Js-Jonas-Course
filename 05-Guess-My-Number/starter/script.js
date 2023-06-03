@@ -10,10 +10,6 @@ const checkBtn = document.querySelector('.check');
 const againBtn = document.querySelector('.again');
 
 
-const playGame = ()=>
-{
-    document.querySelector('.score').textContent;
-}
 checkBtn.addEventListener('click' ,()=> 
 {
     const num = document.querySelector('.guess').value ;
