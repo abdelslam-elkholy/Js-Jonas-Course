@@ -7,9 +7,10 @@ let heighScore =0;
 const checkBtn = document.querySelector('.check');
 const againBtn = document.querySelector('.again');
 
+console.log(secretNumber);
 const guess = (message) =>
 {
-    document.querySelector('.message').textContent = 'too High'
+    document.querySelector('.message').textContent = message;
     score--
     document.querySelector('.score').textContent = score
 }
@@ -23,7 +24,11 @@ const playGame = ()=>
     }
     else if( num > secretNumber)
     {
-
+        guess('Too High')
+    }
+    else if ( num < secretNumber)
+    {
+        guess('Too Low')
     }
     document.querySelector('.label-highscore').textContent
 
