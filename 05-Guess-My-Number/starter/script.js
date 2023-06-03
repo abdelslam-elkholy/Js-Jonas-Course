@@ -11,30 +11,32 @@ const againBtn = document.querySelector('.again');
 const numLabel = document.querySelector('.number');
 console.log(secretNumber);
 
-const guess = message => {
-  document.querySelector('.message').textContent = message;
-  score--;
-  
-};
+const guess = (text)=>
+{
+    message = text;
+    score --
+    scoreLabel = score;
+}
 
 const playGame = () => {
   const num = document.querySelector('.guess').value;
+
   if (num) {
+
     if (num === secretNumber) {
       document.querySelector('.highscore').textContent = score;
-      
-      
       numLabel.textContent = secretNumber;
       numLabel.style.width = '30rem';
+      bodyColor = 'green';
     } else if (num > secretNumber) {
-      guess('Too High');
+        guess('Too High!')
     } else if (num < secretNumber) {
       guess('Too Low');
     }
   }
   else
   {
-    document.querySelector('.message').textContent = 'enter a Number'; 
+    message= 'enter a Number'; 
   }
 };
 checkBtn.addEventListener('click', () => {
@@ -44,3 +46,9 @@ checkBtn.addEventListener('click', () => {
     alert('you lost');
   }
 });
+
+againBtn.addEventListener('click' , ()=>
+{
+    score = 20;
+    message = 'Start guessing...'
+})
