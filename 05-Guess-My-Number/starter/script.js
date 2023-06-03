@@ -4,17 +4,27 @@ let secretNumber =  Math.trunc(Math.random()*20) + 1;
 let score = 20;
 
 let heighScore =0;
-let message = document.querySelector('.message').textContent;
 const checkBtn = document.querySelector('.check');
 const againBtn = document.querySelector('.again');
 
-console.log(secretNumber);
+const guess = (message) =>
+{
+    document.querySelector('.message').textContent = 'too High'
+    score--
+    document.querySelector('.score').textContent = score
+}
 
-const playGame = (message  )=>
+const playGame = ()=>
 {
     const num = Number(document.querySelector('.guess').value) ;
-    if (num === secretNumber) alert('you got it')
-    document.querySelector('.score').textContent;
+    if (num === secretNumber)
+    {
+
+    }
+    else if( num > secretNumber)
+    {
+
+    }
     document.querySelector('.label-highscore').textContent
 
 }
