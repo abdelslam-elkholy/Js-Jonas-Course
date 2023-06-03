@@ -5,4 +5,5 @@ let score = document.querySelector('.score').textContent;
 let heighScore = document.querySelector('.label-highscore').textContent
 let message = document.querySelector('.message').textContent;
 const checkBtn = document.querySelector('.check');
+const againBtn = document.querySelector('.again')
 
