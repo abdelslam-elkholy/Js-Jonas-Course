@@ -25,11 +25,14 @@ const guess = (text)=>
 
 
 const playGame = () => {
-  const num = document.querySelector('.guess').value;
+
+  const num = Number(document.querySelector('.guess').value);
+
   console.log('hey im working from play');
   if (num) {
     console.log('hey im working from play if');
     if (num === secretNumber) {
+        
       document.querySelector('.highscore').textContent = score;
       numLabel.textContent = secretNumber;
       numLabel.style.width = '30rem';
