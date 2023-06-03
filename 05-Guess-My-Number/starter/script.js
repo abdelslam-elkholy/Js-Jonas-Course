@@ -20,7 +20,8 @@ const playGame = ()=>
     const num = Number(document.querySelector('.guess').value) ;
     if (num === secretNumber)
     {
-
+        document.querySelector('.highscore').textContent = score;
+        document.querySelector('.message').textContent = 'You Got It';
     }
     else if( num > secretNumber)
     {
@@ -30,7 +31,6 @@ const playGame = ()=>
     {
         guess('Too Low')
     }
-    document.querySelector('.label-highscore').textContent
 
 }
 checkBtn.addEventListener('click' ,playGame)
