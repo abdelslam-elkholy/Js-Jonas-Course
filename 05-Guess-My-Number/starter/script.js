@@ -48,7 +48,7 @@ const playGame = () => {
   }
 };
 checkBtn.addEventListener('click', () => {
-  if (score > 0) {
+  if (score > 1) {
     playGame();
   } else {
     bodyColor.style.backgroundColor = 'red'
