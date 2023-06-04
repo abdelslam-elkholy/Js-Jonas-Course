@@ -14,3 +14,4 @@ openModalBtns.map(btn =>
 );
 
 closeModalBtn.addEventListener('click' , ()=> toggleModal(add , [modal , overlay]))
+overlay.addEventListener('click' , ()=> toggleModal(add , [modal , overlay]))
