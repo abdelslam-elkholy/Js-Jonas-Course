@@ -36,6 +36,7 @@ const playGame = () => {
   if (num) {
  
     if (num === secretNumber) {
+      heighScore = heighScore > score ? heighScore : score;
       guess('You Got It', score, '#60b347', '30rem', secretNumber , true);
     } else if (num > secretNumber) {
       guessWrong('Too High!');
@@ -59,6 +60,6 @@ checkBtn.addEventListener('click', () => {
 });
 
 againBtn.addEventListener('click', () => {
-  guess('Start guessing...', heighScore, 20, '#222', '15rem', '?' , false);
+  guess('Start guessing...',  20, '#222', '15rem', '?' , false);
   secretNumber = Math.trunc(Math.random() * 20) + 1;
 });
