@@ -19,10 +19,10 @@ const guessWrong = text => {
   scoreLabel.textContent = score;
 };
 
-const guess = (text, highscore, scoreb, color, width, numlabel , btnStatus) => {
+const guess = (text,  scoreb, color, width, numlabel , btnStatus) => {
   bodyColor.style.backgroundColor = color;
-  heighScore = highscore;
-  document.querySelector('.highscore').textContent = highscore;
+ 
+  document.querySelector('.highscore').textContent = heighScore;
   numLabel.textContent = numlabel;
   numLabel.style.width = width;
   message.textContent = text;
@@ -36,7 +36,7 @@ const playGame = () => {
   if (num) {
  
     if (num === secretNumber) {
-      guess('You Got It', score, score, '#60b347', '30rem', secretNumber , true);
+      guess('You Got It', score, '#60b347', '30rem', secretNumber , true);
     } else if (num > secretNumber) {
       guessWrong('Too High!');
     } else if (num < secretNumber) {
