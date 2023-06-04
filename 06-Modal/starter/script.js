@@ -1,4 +1,5 @@
 'use strict';
 
-const modalBtns = document.querySelectorAll('.show-modal');
+const openModalBtn = document.querySelectorAll('.show-modal');
+const closeModalBtn = document.querySelector('.close-modal');
 const modal = document.querySelector('.modal');
