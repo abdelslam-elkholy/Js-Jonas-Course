@@ -12,3 +12,5 @@ const toggleModal = (action, att) => {
 openModalBtns.map(btn =>
   btn.addEventListner('click', () => toggleModal(remove, [modal, overlay]))
 );
+
+closeModalBtn.addEventListener('click' , ()=> toggleModal(add , [modal , overlay]))
