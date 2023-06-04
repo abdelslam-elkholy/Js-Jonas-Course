@@ -54,6 +54,7 @@ checkBtn.addEventListener('click', () => {
     bodyColor.style.backgroundColor = 'red'
     message.textContent = "You Lost"
     checkBtn.disabled = true;
+    scoreLabel.textContent=0;
   }
 });
 
